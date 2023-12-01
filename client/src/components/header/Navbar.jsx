@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import sprite from "../../images/sprite-1.svg";
 import "../../styles/navbar.css";
 import Logout from "../logout";
@@ -34,6 +35,7 @@ const Navbar = () => {
     );
   };
 
+  const location = useLocation();
   const [isCategoryVisible, setIsCategoryVisible] = useState(false);
 
   const toggleCategory = () => {
@@ -43,6 +45,8 @@ const Navbar = () => {
   const closeCategory = () => {
     setIsCategoryVisible(false);
   };
+
+  const isCategoryPage = location.pathname === '/';
 
   return (
     <header>
@@ -78,8 +82,11 @@ const Navbar = () => {
         <Search sprite={sprite} />
       </nav>
       <div className="category">
-      {isCategoryVisible && (
-          <ul className="sub__list block-domain__prices" onClick={closeCategory}>
+        {isCategoryPage && isCategoryVisible && (
+          <ul
+            className="sub__list block-domain__prices"
+            onClick={closeCategory}
+          >
             {categorys.map((cate) => (
               <li
                 className="badge"
