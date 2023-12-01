@@ -5,15 +5,15 @@ export const categorys = [
     },
     {
         index: 1,
-        name: "Улс төр"
+        name: "Шинжлэх ухаан"
     },
     {
         index: 2,
-        name: "Эрүүл мэнд"
+        name: "Улс төр"
     },
     {
         index: 3,
-        name: "Спорт"
+        name: "Эрүүл мэнд"
     },
     {
         index: 4,
@@ -25,10 +25,10 @@ export const categorys = [
     },
     {
         index: 6,
-        name: "Шинжлэх ухаан"
+        name: "Дэлхийн мэдээ"
     },
     {
         index: 7,
-        name: "Дэлхийн мэдээ"
+        name: "Спорт"
     }
 ];

@@ -138,6 +138,7 @@
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s;
+  border: 1px solid black;
 }
 
 .badge:hover {
