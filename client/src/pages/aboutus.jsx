@@ -34,7 +34,11 @@ const Aboutus = () => {
       <div className="about__block">
         <h2 className="about__title">Бидний тухай:</h2>
         <p className="about__par">
-          
+          “Анлимитэд медиа групп” ХХК нь 2016 онд байгуулагдсан бөгөөд одоо
+          залууст зориулсан Ub.life мэдээллийн сайт ба “Гэрэг” сэтгүүлийг эрхлэн
+          гаргаж байна. Бид 2019 оноос дэлхийн шилдэг хэвлэлүүдийн нэг “The New
+          York Times Licensing Group”-ийн Монгол дахь хамтрагч болж агуулга,
+          контентийг нь албан ёсны эрхтэйгээр өөрийн сувгуудаар түгээж байна
         </p>
         <div className="ourself">
           <span className="me">
@@ -46,9 +50,7 @@ const Aboutus = () => {
             <h3 className="about__email">xyptonize@gmail.com</h3>
           </span>
         </div>
-        <div className="about__social">
-
-        </div>
+        <div className="about__social"></div>
       </div>
       <div className="about__block">
         <h2 className="about__title">Холбоо барих:</h2>
