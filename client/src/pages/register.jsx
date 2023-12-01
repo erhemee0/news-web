@@ -77,7 +77,7 @@ const Register = () => {
     <div className="container">
       <img className="reg__image" src={registerImage} alt="register page" />
       <main className="reg__main">
-        <h2 id="reg__title">Шар мэдээ</h2>
+        <h2 id="reg__title">News stream</h2>
         <p className="reg__sub">Бүртгэлийн хэсэг</p>
         <form className="reg__form" onSubmit={handleSubmit}>
           <label className="reg__label" htmlFor="username">

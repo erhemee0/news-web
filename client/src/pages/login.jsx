@@ -55,7 +55,7 @@ const Login = () => {
         <div className="container">
             <img id="login__image" src={loginImage} alt="login page" />
             <div className="login__main">
-                <h2 id="login__title">Шар мэдээ</h2>
+                <h2 id="login__title">News stream</h2>
                 <p className="login__sub">Үргэлжлүүлэхийн тулд нэвтэрнэ үү</p>
                 <form className="login__form" onSubmit={handleSubmit}>
                     <label className="login__label" htmlFor="email">Имэйл: </label>
