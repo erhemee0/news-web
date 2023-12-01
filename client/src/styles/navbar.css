@@ -130,15 +130,13 @@
 }
 
 .badge {
-  border-radius: 20px;
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.7rem;
   margin: 0 0.5rem;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s;
-  border: 1px solid black;
 }
 
 .badge:hover {

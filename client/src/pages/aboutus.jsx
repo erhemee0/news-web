@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import img from "../images/register.jpg";
-import instagram from "../images/instagram.png";
-import gmail from "../images/gmail.png";
 import "../styles/aboutus.css";
 import { postDataAPI } from "../utils/fetchData";
 
@@ -36,30 +34,21 @@ const Aboutus = () => {
       <div className="about__block">
         <h2 className="about__title">Бидний тухай:</h2>
         <p className="about__par">
-          The CSI News is multifaceted digital media to helping citizens,
-          consumers, business leaders. We publish independent reporting,
-          rankings, data journalism and advice that has earned the trust of our
-          readers and users. Thank you for visiting
+          
         </p>
         <div className="ourself">
           <span className="me">
             <img src={img} className="about__img" alt="profile" />
-            <h3 className="about__email">ishitaachauhan11@gmail.com</h3>
+            <h3 className="about__email">erhmee@gmail.com</h3>
           </span>
           <span className="me">
             <img src={img} className="about__img" alt="profile" />
-            <h3 className="about__email">charvitardeshna@gmail.com</h3>
-          </span>
-          <span className="me">
-            <img src={img} className="about__img" alt="profile" />
-            <h3 className="about__email">smitbhoraniya11@gmail.com</h3>
+            <h3 className="about__email">xyptonize@gmail.com</h3>
           </span>
         </div>
         <div className="about__social">
-          <img src={instagram} alt="instagram" className="about__simg" />
-          <img src={gmail} alt="gmail" className="about__simg" />
+
         </div>
-        <p className="about__copy">©Copyright 2021 CSI NEWS</p>
       </div>
       <div className="about__block">
         <h2 className="about__title">Холбоо барих:</h2>
