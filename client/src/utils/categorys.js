@@ -1,34 +1,34 @@
 export const categorys = [
     {
         index: 0,
-        name: "Cars"
+        name: "Машин"
     },
     {
         index: 1,
-        name: "Politics"
+        name: "Улс төр"
     },
     {
         index: 2,
-        name: "Health"
+        name: "Эрүүл мэнд"
     },
     {
         index: 3,
-        name: "Sports"
+        name: "Спорт"
     },
     {
         index: 4,
-        name: "Education"
+        name: "Боловсрол"
     },
     {
         index: 5,
-        name: "Business"
+        name: "Бизнес"
     },
     {
         index: 6,
-        name: "Science"
+        name: "Шинжлэх ухаан"
     },
     {
         index: 7,
-        name: "World"
+        name: "Дэлхийн мэдээ"
     }
 ];

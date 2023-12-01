@@ -35,10 +35,10 @@ const AddNews = ({setAddNews}) => {
 
         files.forEach(file => {
             if(!file)
-                return errMsg = "File does not exists."
+                return errMsg = "Файл олдсонгүй."
             
             if(file.size > 1024 * 1024 * 5){
-                return errMsg = "The image largest is 5MB.";
+                return errMsg = "Хэт том зураг байна. Жижиг зураг оруулна уу.";
             }
 
             return newImages.push(file);
@@ -80,8 +80,8 @@ const AddNews = ({setAddNews}) => {
                 <img className="icon" src={closeIcon} alt="close button" />
             </button>
             <form className="addNews__form">
-                <h2 className="addNews__title">Add News</h2>
-                <label className="addNews__label" htmlFor="title">Title:</label>
+                <h2 className="addNews__title">Мэдээ нэмэх</h2>
+                <label className="addNews__label" htmlFor="title">Гарчиг:</label>
                 <input
                     className="addNews__input"
                     type="text" 
@@ -91,7 +91,7 @@ const AddNews = ({setAddNews}) => {
                     onChange={handleChangeInput}
                     value={title}
                 />
-                <label className="addNews__label" htmlFor="">Content:</label>
+                <label className="addNews__label" htmlFor="">Агуулга:</label>
                 <textarea
                     className="addNews__textarea"
                     type="text" 
@@ -101,7 +101,7 @@ const AddNews = ({setAddNews}) => {
                     onChange={handleChangeInput}
                     value={content}
                 />
-                <label className="addNews__label" htmlFor="category">Category:</label>
+                <label className="addNews__label" htmlFor="category">Төрөл:</label>
                 <select value={category} onChange={handleChangeCategory} id="category" className="addNews__category">
                     <option className="addNews__option" value=""></option>
                     {
@@ -110,7 +110,7 @@ const AddNews = ({setAddNews}) => {
                         ))
                     }
                 </select>
-                <label className="addNews__label" htmlFor="file_up">Images</label>
+                <label className="addNews__label" htmlFor="file_up">Зурагнууд</label>
                 <div className="addNews__imgUpload">
                     <img className="addNews__add" src={addIcon} alt="add news" />
                     <input onChange={handleChangeImages} className="addNews__images" type="file" name="file" id="file_up" accept="image/*" multiple/>
@@ -128,7 +128,7 @@ const AddNews = ({setAddNews}) => {
                 </div>
 
                 <button onClick={handleSubmit} className="btn btn--primary addNews__btn">
-                    Add
+                    Нэмэх
                 </button>
             </form>
         </div>
