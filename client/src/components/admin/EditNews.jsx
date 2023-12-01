@@ -96,7 +96,7 @@ const EditNews = ({setEditNews, n}) => {
                     onChange={handleChangeInput}
                     value={title}
                 />
-                <label className="addNews__label" htmlFor="">Эх бичвэр:</label>
+                <label className="addNews__label" htmlFor="">Агуулга:</label>
                 <textarea
                     className="addNews__textarea"
                     type="text" 

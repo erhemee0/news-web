@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const NewsCard = ({n}) => {
     if (!n.images) {
-        return <span>Loading...</span>;
+        return <span>Түр хүлээнэ үү...</span>;
     }
     return (   
         <div>
