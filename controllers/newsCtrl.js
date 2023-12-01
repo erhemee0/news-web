@@ -8,16 +8,16 @@ const newsCtrl = {
             const { title, images, content, category, user } = req.body;
 
             if (images.length === 0)
-                return res.status(400).json({ msg: "Please add your photo." })
+                return res.status(400).json({ msg: "Зураг оруулна уу." })
 
             if (!title)
-                return res.status(400).json({ msg: "Please add title." });
+                return res.status(400).json({ msg: "Гарчигаа оруулна уу." });
 
             if (!content)
-                return res.status(400).json({ msg: "Please add content." });
+                return res.status(400).json({ msg: "Агуулгаа оруулна уу." });
 
             if (!category)
-                return res.status(400).json({ msg: "Please add Category." });
+                return res.status(400).json({ msg: "Мэдээний төрлийг сонгоно уу." });
 
             const newNew = new News({
                 title, images, content, category, user
@@ -55,16 +55,16 @@ const newsCtrl = {
             });
     
             if (images.length === 0)
-                return res.status(400).json({ msg: "Please add your photo." })
-    
+                return res.status(400).json({ msg: "Зураг оруулна уу." })
+
             if (!title)
-                return res.status(400).json({ msg: "Please add title." });
-    
+                return res.status(400).json({ msg: "Гарчигаа оруулна уу." });
+
             if (!content)
-                return res.status(400).json({ msg: "Please add content." });
-    
+                return res.status(400).json({ msg: "Агуулгаа оруулна уу." });
+
             if (!category)
-                return res.status(400).json({ msg: "Please add Category." });    
+                return res.status(400).json({ msg: "Мэдээний төрлийг сонгоно уу." }); 
                 
             res.json({
                 msg: 'News Updated',

@@ -43,7 +43,7 @@ const authCtrl = {
             await newUser.save();
 
             res.json({
-                msg: 'Registered Successfully :)',
+                msg: 'Амжилттай бүртгүүллээ :)',
                 access_token,
                 user: {
                     ...newUser._doc,
@@ -61,12 +61,12 @@ const authCtrl = {
             const user = await Users.findOne({ email });
 
             if (!user)
-                return res.status(500).json({ msg: "This email does not exist." });
+                return res.status(500).json({ msg: "Бүртгэлтэй хэрэглэгч алга" });
 
             const isMatch = await bcrypt.compare(password, user.password);
 
             if (!isMatch)
-                return res.status(500).json({ msg: "Password is Wrong." });
+                return res.status(500).json({ msg: "Нууц үг буруу байна." });
 
             const access_token = createAccessToken({ id: user._id });
             const refresh_token = createRefreshToken({ id: user._id });
@@ -78,7 +78,7 @@ const authCtrl = {
             });
 
             res.json({
-                msg: 'Login Successfully :)',
+                msg: 'Амжилттай нэвтэрлээ :)',
                 access_token,
                 user: {
                     ...user._doc,
@@ -92,7 +92,7 @@ const authCtrl = {
     logout: async (req, res) => {
         try {
             res.clearCookie('refreshtoken', { path: '/api/refresh_token' })
-            return res.json({ msg: "Logout Successfully!" })
+            return res.json({ msg: "Амжилттай гарлаа!" })
         } catch (err) {
             return res.status(500).json({msg: err.message});
         }
@@ -102,16 +102,16 @@ const authCtrl = {
             const rf_token = req.cookies.refreshtoken;
 
             if (!rf_token)
-                return res.status(400).json({ msg: "Please Login!!" });
+                return res.status(400).json({ msg: "Эхлээд нэвтэрнэ үү!!" });
 
             jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, async (err, result) => {
                 if (err)
-                    return res.status(400).json({ msg: "Please login!!" });
+                    return res.status(400).json({ msg: "Эхлээд нэвтэрнэ үү!!" });
 
                 const user = await Users.findById(result.id).select("-password");
 
                 if (!user)
-                    return res.status(400).json({ msg: "User is not exist :(" });
+                    return res.status(400).json({ msg: "Хэрэглэгч олдсонгүй :(" });
 
                 const access_token = createAccessToken({ id: result.id });
 

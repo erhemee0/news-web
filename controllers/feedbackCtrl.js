@@ -11,7 +11,7 @@ const feedbackCtrl = {
             await feedback.save();
 
             res.json({
-                msg: 'Feed back added',
+                msg: 'Санал, хүсэлт илгээгдлээ',
                 feedback
             })
         } catch (err) {

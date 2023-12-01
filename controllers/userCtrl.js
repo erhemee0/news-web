@@ -6,7 +6,7 @@ const userCtrl = {
             const user = await Users.findById(req.params.id).select('-password');
         
             if(!user)
-                return res.status(400).json({msg: "User does not exist"});
+                return res.status(400).json({msg: "Хэрэглэгч олдсонгүй"});
 
             res.json({user});
         } catch (err) {
@@ -21,13 +21,13 @@ const userCtrl = {
             });
 
             if(!username)
-                return res.status(400).json({ msg: "Please add Username." });
+                return res.status(400).json({ msg: "Хэрэглэгчийн нэрээ оруулна уу." });
 
             if(!avatar)
-                return res.status(400).json({ msg: "Please add Avatar." });
+                return res.status(400).json({ msg: "Зургаа оруулна уу." });
 
             res.json({
-                msg: 'Profile Updated'
+                msg: 'Амжилттай шинэчлэгдлээ'
             });
         } catch (err) {
             return res.status(500).json({msg: err.message})
