@@ -30,13 +30,5 @@ export const categorys = [
     {
         index: 7,
         name: "World"
-    },
-    {
-        index: 8,
-        name: "Entertainment"
-    },
-    {
-        index:9,
-        name: "Ancient"
-    },
+    }
 ];

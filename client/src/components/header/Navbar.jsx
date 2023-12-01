@@ -42,7 +42,7 @@ const Navbar = () => {
                 <svg onClick={toggleBtn} className="icon nav__toggler">
                      <use href={sprite + "#menu"}></use>
                 </svg>
-                <Search sprite={sprite} />
+                
                 <ul className="list nav__list collapsible__content">
                     <li className="nav__item"><Link to="/">Мэдээ</Link></li>
                     <li className="nav__item"><Link to="/aboutus">Бидний тухай</Link></li>
@@ -53,6 +53,7 @@ const Navbar = () => {
                     <li className="nav__item"><Link to={`/profile/${id}`}>Хувийн мэдээлэл</Link></li>
                     <li className="nav__item"><Link to="/"><Logout /></Link></li>
                 </ul>
+                <Search sprite={sprite} />
             </nav>
             <div className="category">
                 <ul className="sub__list block-domain__prices">

@@ -1,9 +1,9 @@
 .logout__btn {
   text-decoration: none;
-  color: #ba0c2e;
+  color: #F9F7F7;
   transition: color 0.3s;
 }
 
 .logout__btn:hover {
-  color: #000;
+  color: rgb(131, 131, 131), 242, 242)
 }
