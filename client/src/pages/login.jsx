@@ -64,7 +64,7 @@ const Login = () => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder=" &#xF007;  email"
+                        placeholder=" &#xF007;  Имэйл"
                         style={{fontFamily: "Arial, FontAwesome"}}
                         onChange={handleChangeInput}
                         value={email}
@@ -75,7 +75,7 @@ const Login = () => {
                         type="password"
                         id="password"
                         name="password"
-                        placeholder=" &#xF023;  Password"
+                        placeholder=" &#xF023;  Нууц үг"
                         style={{fontFamily: "Arial, FontAwesome"}}
                         onChange={handleChangeInput}
                         value={password}

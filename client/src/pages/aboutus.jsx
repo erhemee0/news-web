@@ -24,7 +24,7 @@ const Aboutus = () => {
     e.preventDefault();
     try {
       await postDataAPI("addfeedback", { email, msg });
-      setContect({ email: "", msg: "", success: "Feedback submitted" });
+      setContect({ email: "", msg: "", success: "Амжилттай илгээгдлээ" });
     } catch (err) {
       err.response.data.msg &&
         setContect({ ...contect, err: err.response.data.msg });
@@ -72,7 +72,7 @@ const Aboutus = () => {
             type="text"
             id="email"
             name="email"
-            placeholder="Enter Email Address..."
+            placeholder="Имэйл хаягаа оруулна уу..."
             onChange={handleChangeInput}
             value={email}
           />
@@ -84,7 +84,7 @@ const Aboutus = () => {
             type="text"
             id="msg"
             name="msg"
-            placeholder="Enter Message..."
+            placeholder="Санал хүсэлтээ бичнэ үү..."
             onChange={handleChangeInput}
             value={msg}
           />
